@@ -49,17 +49,17 @@ const codepromotion: React.FC<PromoProps> = ({ data }) => {
     };
     return (
         <div className='relative w-full h-40'>
-            <button className="absolute w-10 h-10 top-1/2 left-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollLeft}>
+            <button className="z-10 absolute w-10 h-10 top-1/2 left-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollLeft}>
                 &#10094;
             </button>
-            <button className="absolute top-1/2 w-10 h-10 right-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollRight}>
+            <button className="z-10 absolute top-1/2 w-10 h-10 right-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollRight}>
                 &#10095;
             </button>
-            <div className='container mx-auto w-full h-full scroll-smooth'>
-                <div className='flex overflow-x-hidden h-full' ref={containerRef}>
+            <div className='container mx-auto w-full h-full'>
+                <div className='flex overflow-x-hidden w-full h-full scroll-smooth hover:overflow-x-scroll rounded-lg' ref={containerRef}>
                     {data.map((item, index) => (
-                        <div className='flex-none text-center mx-5 h-full relative '>
-                            <div key={item.id} className='h-full'>
+                        <div className='flex-none text-center pr-2 relative '>
+                            <div key={item.id} className='h-full w-full'>
                                 <a href={item.link} target="_blank" rel="noopener noreferrer">
                                     <img src={item.image} alt={index + item.title} className="w-full h-full object-cover" />
                                 </a>

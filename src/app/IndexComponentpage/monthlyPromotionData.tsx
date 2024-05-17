@@ -27,7 +27,7 @@ const data = [
         id: 3,
         image: '/images/Tricolik.png',
         link: '/',
-        name: 'thantavatpage1',
+        name: 'thantavatpage1page',
         type : "สารกำจัดหญ้า",
         price : 1000,
         volumn : "500 CC",

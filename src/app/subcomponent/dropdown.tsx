@@ -55,9 +55,6 @@ const Dropdown: React.FC<DropdownProps> = ({ name, options }) => {
                     )}
                 </button>
             </div>
-            <div>
-                
-            </div>
             {isOpen && (
                 <div className="bg-[#ebebeb] absolute top-12 flex flex-col p-2" style={{ width: maxWidth }}>
                     {options && options.map((item, i) => (

@@ -44,25 +44,27 @@ const PromotionAndType: React.FC<CatalogProps> = ({ data }) => {
 
     return (
         <div className='relative w-full h-auto pb-10'>
-            <h1 className="flex text-4xl font-bold my-10 justify-center">หมวดหมู่สินค้า</h1>
-            <div className='w-full h-auto'>
-                <button className="absolute w-10 h-10 top-1/2 left-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollLeft}>
-                    &#10094;
-                </button>
-                <button className="absolute top-1/2 w-10 h-10 right-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollRight}>
-                    &#10095;
-                </button>
-                <div className='flex overflow-x-hidden scroll-smooth justify-center items-center' style={{}} ref={containerRef}>
-                    {data.map((item, index) => (
-                        <div className='flex-none text-center' key={item.id}>
-                            <div className='mx-8 min-w-35 min-h-35 rounded-full'>
-                                <a href={item.link} target="_blank" rel="noopener noreferrer">
-                                    <img src={item.image} alt={item.title} className="w-full h-full rounded-full object-cover" />
-                                </a>
+            <div className='container mx-auto'>
+                <h1 className="flex text-4xl font-bold my-10 justify-center ">หมวดหมู่สินค้า</h1>
+                <div className='w-full h-auto'>
+                    <button className="absolute w-10 h-10 top-1/2 left-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollLeft}>
+                        &#10094;
+                    </button>
+                    <button className="absolute top-1/2 w-10 h-10 right-4 transform -translate-y-1/2 bg-[#224490] text-white rounded-full p-2 " onClick={scrollRight}>
+                        &#10095;
+                    </button>
+                    <div className='flex overflow-x-hidden scroll-smooth hover:overflow-x-scroll' style={{}} ref={containerRef}>
+                        {data.map((item, index) => (
+                            <div className='flex-none text-center' key={item.id}>
+                                <div className='mx-8 min-w-35 min-h-35 rounded-full'>
+                                    <a href={item.link} target="_blank" rel="noopener noreferrer">
+                                        <img src={item.image} alt={item.title} className="w-full h-full rounded-full object-cover" />
+                                    </a>
+                                </div>
+                                <p>{item.title}</p>
                             </div>
-                            <p>{item.title}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

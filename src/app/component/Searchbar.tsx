@@ -36,7 +36,7 @@ const Searchbar = () => {
     }, []);
     return (
         <nav className='text-gray-500 bg-white w-full h-full'>
-            <div className='flex justify-between items-center container mx-auto'>
+            <div className='flex justify-between items-center container mx-auto p-2'>
                 <div>
                     <a href="/" target="_blank" rel="noopener noreferrer">
                         <img src="/images/Logo.png" alt="Home" className="w-full h-12 object-cover" />

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => (
     <footer className="w-full bg-[#1a1e4e] shadow-footer py-10">
-        <div className='flex items-center justify-between container mx-auto'>
+        <div className='flex items-center justify-between container mx-auto p-5'>
             <div className='my-5 flex-col'>
                     <a href="/" target="_blank" rel="noopener noreferrer">
                         <img src="/images/Logo.png" alt="Home" className="w-fill h-12 object-cover" />
@@ -38,7 +38,7 @@ const Footer = () => (
             </div>
         </div>
         <hr className='my-5 border-purple-400' />
-        <div className='flex items-center justify-center lg:justify-between container mx-auto'>
+        <div className='flex items-center justify-center lg:justify-between container mx-auto p-5'>
             <p className="text-white">
                 Copyright &copy; {new Date().getFullYear()}{' '}
                 <a

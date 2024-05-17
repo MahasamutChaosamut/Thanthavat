@@ -5,7 +5,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 function contackus() {
     return (
         <div className="w-full h-90 border-solid pb-5">
-            <div className="container mx-auto">
+            <div className="container mx-auto p-10">
                 <div className="flex flex-col">
                     <p className="my-2 font-bold" style={{ fontSize: '14px' }}>ติดต่อเรา</p>
                     <p className="my-2 font-bold" style={{ fontSize: '25px' }}>ช่องทางการสั่งซื้อออนไลน์และสาขาทั้งหมดของเรา</p>
